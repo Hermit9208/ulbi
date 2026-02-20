@@ -1,12 +1,16 @@
 {
+  "Login": "Login",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
       "": ""
     }
   },
+  "d": "d",
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "throw error",
+  "user name": "user name",
+  "user password": "user password",
   "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
