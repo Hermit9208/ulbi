@@ -1,6 +1,20 @@
 {
-    "Profile": "Profile",
-    "First name": "First name",
-    "Last name": "Last name",
-    "Edit": "Edit"
+  "Профиль": "Profile",
+  "Редактировать": "Edit",
+  "Ваша фамилия": "Your lastname",
+  "Ваше имя": "Your name",
+  "Произошла ошибка при загрузке профиля": "Upload error",
+  "Попробуйте обновить страницу": "Try to update page",
+  "Отменить": "Cancel",
+  "Сохранить": "Save",
+  "Город": "City",
+  "Ваш возраст": "Your age",
+  "Имя пользователя": "Username",
+  "Введите имя пользователя": "Input username",
+  "Введите ссылку на аватар": "Input avatar link",
+    "Server error": "Server error",
+  "Incorrect country": "Incorrect country",
+  "Incorrect user data": "Incorrect user data",
+  "Incorrect age": "Incorrect age",
+  "No data": "No data"
 }
