@@ -3,6 +3,7 @@
   "An error occurred while uploading the article": "An error occurred while uploading the article",
   "Article details": "Article details",
   "Article not found": "Article not found",
+  "Back to articles": "Back to articles",
   "Comments": "Comments",
   "Comments not found": {
     "": "Comments not found."
@@ -15,6 +16,7 @@
   },
   "PROFILE PAGE": "PROFILE PAGE",
   "Put your comment here": "Put your comment here",
+  "Read more": "Read more",
   "Send": "Send",
   "decrement": "decrement",
   "increment": "increment",
