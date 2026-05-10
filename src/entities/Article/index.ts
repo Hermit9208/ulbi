@@ -10,3 +10,5 @@ export { articleDetailsActions, articleDetailsReducer } from './model/slice/arti
 export { fetchArticleById } from './model/services/fetchArticleById/fetchArticleById';
 
 export { ArticleList } from './ui/ArticleList/ArticleList';
+
+export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
