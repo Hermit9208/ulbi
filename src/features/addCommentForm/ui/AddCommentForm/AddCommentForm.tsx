@@ -35,6 +35,14 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
         onCommentTextChange('');
     }, [onCommentTextChange, onSendComment, text]);
 
+    if (error) {
+        return (
+            <div className={classNames(cls.AddCommentForm, {}, [className])}>
+                {error}
+            </div>
+        );
+    }
+
     return (
         <DynamicModuleLoader reducers={reducers}>
             <div className={classNames(cls.AddCommentForm, {}, [className])}>
