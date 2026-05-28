@@ -1,5 +1,6 @@
 {
   "": "",
+  "All": "All",
   "An error occurred while uploading the article": "An error occurred while uploading the article",
   "Article details": "Article details",
   "Article not found": "Article not found",
@@ -9,6 +10,7 @@
     "": "Comments not found."
   },
   "Error ocured ": "Error ocured ",
+  "IT": "IT",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
       "": ""
@@ -19,7 +21,9 @@
   "Read more": "Read more",
   "Send": "Send",
   "decrement": "decrement",
+  "economics": "economics",
   "increment": "increment",
+  "sience": "sience",
   "throw error": "throw error",
   "Ваш возраст": "Ваш возраст",
   "Ваша фамилия": "Ваша фамилия",
@@ -44,16 +48,24 @@
   "Обновить страницу": "Обновить страницу",
   "Отменить": "Отменить",
   "Переключить": "Переключить",
+  "По": "",
+  "Поиск": "Поиск",
   "Попробуйте обновить страницу": "Попробуйте обновить страницу",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
   "Профиль": "Профиль",
   "Редактировать": "Редактировать",
   "Серверная ошибка при сохранении": "Серверная ошибка при сохранении",
+  "Сортировать ПО": "Сортировать ПО",
   "Сохранить": "Сохранить",
   "Страница не найдена": "Страница не найдена",
   "Укажите валюту": "",
   "Укажите страну": "",
   "Форма авторизации": "",
-  "Язык": "Язык"
+  "Язык": "Язык",
+  "возростанию": "возростанию",
+  "дате создания": "дате создания",
+  "названию": "названию",
+  "просмотрам": "просмотрам",
+  "убыванию": "убыванию"
 }
