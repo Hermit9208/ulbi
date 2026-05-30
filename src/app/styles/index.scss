@@ -18,3 +18,21 @@
 .content-page {
     display: flex;
 }
+
+/* Ширина всего скроллбара */
+*::-webkit-scrollbar {
+    width: 8px; /* для вертикального */
+    height: 12px; /* для горизонтального */
+}
+
+/* Фон дорожки (пространство, по которому движется ползунок) */
+*::-webkit-scrollbar-track {
+    background: var(--card-bg);
+}
+
+/* Бегунок (ползунок, который вы перетаскиваете) */
+*::-webkit-scrollbar-thumb {
+    background: var(--inverted-primary-color);
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+}
