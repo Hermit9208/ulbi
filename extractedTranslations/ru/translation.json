@@ -9,6 +9,10 @@
   "Comments not found": {
     "": "Comments not found."
   },
+  "Create article": "Create article",
+  "Create new article": "Create new article",
+  "Edit article": "Edit article",
+  "Edit article with ID = ": "Edit article with ID = ",
   "Error ocured ": "Error ocured ",
   "IT": "IT",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
@@ -21,6 +25,7 @@
   "Read more": "Read more",
   "Recommendations": "Recommendations",
   "Send": "Send",
+  "Ulbi TV App": "Ulbi TV App",
   "decrement": "decrement",
   "economics": "economics",
   "increment": "increment",
