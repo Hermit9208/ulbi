@@ -1,6 +1,7 @@
 {
   "": "",
   "All": "All",
+  "An error occurred when downloading articles": "An error occurred when downloading articles",
   "An error occurred while uploading the article": "An error occurred while uploading the article",
   "Article details": "Article details",
   "Article not found": "Article not found",
@@ -24,6 +25,7 @@
   },
   "PROFILE PAGE": "PROFILE PAGE",
   "Profile": "Profile",
+  "Profile not found": "Profile not found",
   "Put your comment here": "Put your comment here",
   "Read more": "Read more",
   "Recommendations": "Recommendations",
