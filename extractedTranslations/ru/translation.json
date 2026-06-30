@@ -1,5 +1,7 @@
 {
   "": "",
+  "Admin": "Admin",
+  "Admin panel": "Admin panel",
   "All": "All",
   "An error occurred when downloading articles": "An error occurred when downloading articles",
   "An error occurred while uploading the article": "An error occurred while uploading the article",
@@ -32,6 +34,7 @@
   "Send": "Send",
   "Ulbi TV App": "Ulbi TV App",
   "User profile": "User profile",
+  "You do not have permission to access this page": "You do not have permission to access this page",
   "decrement": "decrement",
   "economics": "economics",
   "increment": "increment",

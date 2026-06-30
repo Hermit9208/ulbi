@@ -49,5 +49,7 @@
     "Профиль пользователя": "Профиль пользователя",
     "User profile": "User profile",
   "Profile": "Profile",
-    "An error occurred when downloading articles": "An error occurred when downloading articles"
+    "An error occurred when downloading articles": "An error occurred when downloading articles",
+    "Admin": "Admin",
+  "You do not have permission to access this page": "You do not have permission to access this page"
 }
