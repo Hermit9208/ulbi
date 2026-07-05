@@ -1,4 +1,5 @@
-import { Article, ArticleBlockType, ArticleType } from '../types/article';
+import { ArticleType, ArticleBlockType } from '../consts/articleConsts';
+import { Article } from '../types/article';
 import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
 import { articleDetailsReducer } from '../slice/articleDetailsSlice';
 import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
