@@ -21,6 +21,9 @@
   "Edit article with ID = ": "Edit article with ID = ",
   "Error ocured ": "Error ocured ",
   "IT": "IT",
+  "Leave your feedback about the article, it will help improve the quality": "Leave your feedback about the article, it will help improve the quality",
+  "Leave your feedback about the article, it will help to improove our service": "",
+  "Leave your review about article, it will help to improove our service": "",
   "Loading": "Loading",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
@@ -31,9 +34,12 @@
   "Profile": "Profile",
   "Profile not found": "",
   "Put your comment here": "Put your comment here",
+  "Rate the article": "Rate the article",
   "Read more": "Read more",
   "Recommendations": "Recommendations",
   "Send": "Send",
+  "Thank you for riview": "",
+  "Thanks for the rating": "Thanks for the rating",
   "Ulbi TV App": "Ulbi TV App",
   "User profile": "User profile",
   "You do not have permission to access this page": "",
