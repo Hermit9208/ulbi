@@ -8,7 +8,9 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { HStack } from '@/shared/ui/Stack';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slice/addCommentFormSlice';
-import { getAddCommentFormError, getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
+import {
+    getAddCommentFormError, getAddCommentFormText,
+} from '../../model/selectors/addCommentFormSelectors';
 import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {

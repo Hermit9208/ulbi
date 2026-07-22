@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ArticleTextBlockComponent } from './ArticleTextBlockComponent';
-import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
+import { ArticleBlockType } from '../../model/consts/articleConsts';
 
 export default {
     title: 'entities/Article/ArticleTextBlockComponent',

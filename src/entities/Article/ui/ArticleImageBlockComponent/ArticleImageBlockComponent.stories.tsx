@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ArticleImageBlockComponent } from './ArticleImageBlockComponent';
-import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
+import { ArticleBlockType } from '../../model/consts/articleConsts';
 
 export default {
     title: 'entities/Article/ArticleImageBlockComponent',

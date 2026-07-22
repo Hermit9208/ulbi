@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
-import { useGetProfileRating, useRateProfile } from '@/features/profileRating/api/profileRatingApi';
+import { useGetProfileRating, useRateProfile } from '../../api/profileRatingApi';
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 
 export interface ProfileRatingProps {
