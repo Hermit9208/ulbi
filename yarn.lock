@@ -7437,10 +7437,10 @@ eslint-module-utils@^2.7.2:
     debug "^3.2.7"
     find-up "^2.1.0"
 
-eslint-plugin-hermit9208-plugin@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.npmjs.org/eslint-plugin-hermit9208-plugin/-/eslint-plugin-hermit9208-plugin-0.0.3.tgz"
-  integrity sha512-k6dOs8CIdg+h2IVMnqOCAah8DOMd5SHQvs1S/RhTj+imcOyXP/7D1vuqtOUwr1XQrPvdW1Y9O/FHVuOnzr1tpA==
+eslint-plugin-hermit9208-plugin@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/eslint-plugin-hermit9208-plugin/-/eslint-plugin-hermit9208-plugin-0.0.4.tgz"
+  integrity sha512-ZmRnz1oaIzCmsO7crJ1uHoVjxfSxGSjfj2cm/Y/2p3JDPpL/GpqqlMADATqkGhlHfak3mQw7JbqRLVXXAUBU8w==
   dependencies:
     requireindex "^1.2.0"
 
