@@ -10,6 +10,7 @@
   "Back to articles": "Back to articles",
   "Choose country": "Choose country",
   "Choose currency": "Choose currency",
+  "Close": "Close",
   "Comments": "Comments",
   "Comments not found": {
     "": "Comments not found."
@@ -20,6 +21,8 @@
   "Edit article with ID = ": "Edit article with ID = ",
   "Error ocured ": "Error ocured ",
   "IT": "IT",
+  "Leave your feedback about the article, it will help improve the quality": "Leave your feedback about the article, it will help improve the quality",
+  "Leave your feedback about the profile, it will help improve the quality": "Leave your feedback about the profile, it will help improve the quality",
   "Loading": "Loading",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
@@ -30,12 +33,17 @@
   "Profile": "Profile",
   "Profile not found": "Profile not found",
   "Put your comment here": "Put your comment here",
+  "Rate the article": "Rate the article",
+  "Rate the profile": "Rate the profile",
   "Read more": "Read more",
   "Recommendations": "Recommendations",
   "Send": "Send",
+  "Thanks for the rating": "Thanks for the rating",
   "Ulbi TV App": "Ulbi TV App",
   "User profile": "User profile",
   "You do not have permission to access this page": "You do not have permission to access this page",
+  "Your review": "Your review",
+  "Your reviews": "Your reviews",
   "decrement": "decrement",
   "economics": "economics",
   "increment": "increment",
@@ -84,12 +92,5 @@
   "дате создания": "дате создания",
   "названию": "названию",
   "просмотрам": "просмотрам",
-  "убыванию": "убыванию",
-    "Your reviews": "Your reviews",
-  "Close": "Close",
-    "Rate the article": "Rate the article",
-  "Leave your feedback about the article, it will help improve the quality": "Leave your feedback about the article, it will help improve the quality",
-  "Thanks for the rating": "Thanks for the rating",
-    "Rate the profile": "Rate the profile",
-  "Leave your feedback about the profile, it will help improve the quality": "Leave your feedback about the profile, it will help improve the quality"
+  "убыванию": "убыванию"
 }

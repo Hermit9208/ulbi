@@ -82,6 +82,13 @@ module.exports = {
                 ],
             },
         ],
+        'hermit9208-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
@@ -94,6 +101,7 @@ module.exports = {
             rules: {
                 'i18next/no-literal-string': 'off',
                 'max-len': 'off',
+                'react/jsx-props-no-spreading': 'off',
             },
         },
     ],
