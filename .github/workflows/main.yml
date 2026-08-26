@@ -35,4 +35,6 @@ jobs:
         if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
+        env:
+          NODE_OPTIONS: --dns-result-order=ipv4first
         if: always()
