@@ -7,7 +7,6 @@ import { Avatar } from '@/shared/ui/Avatar';
 import {
     getUserAuthData, isUserAdmin, isUserManager, userActions,
 } from '@/entities/User';
-import cls from './AvatarDropdown.module.scss';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 
 interface AvatarDropdownProps {
@@ -34,7 +33,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
 
     return (
         <DropDown
-            className={classNames(cls.AvatarDropdown, {}, [className])}
+            className={classNames('', {}, [className])}
             direction="bottom right"
             items={[
                 ...(isAdminPanelAvailable ? [{
