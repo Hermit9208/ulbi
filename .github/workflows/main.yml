@@ -80,8 +80,14 @@ jobs:
         env:
           NODE_OPTIONS: --dns-result-order=ipv4first
         if: always()
+      - name: unit testing
+        if: always()
+        run: npm run test:unit
       - name: Generate HTML report
         run: npm run test:ui:report
+        if: always()
+      - name: move loki
+        run: mv .loki reports/
         if: always()
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -90,7 +96,7 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         if: always()
         with:
-          path: '.loki'
+          path: 'reports'
       - name: Deploy to GitHub Pages
         id: deployment
         if: always()
