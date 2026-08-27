@@ -86,8 +86,18 @@ jobs:
       - name: Generate HTML report
         run: npm run test:ui:report
         if: always()
+      - name: Check Loki report
+        run: |
+          echo "=== .loki contents ==="
+          find .loki -maxdepth 2 -type f || true
+        if: always()
       - name: move loki
         run: mv .loki reports/
+        if: always()
+      - name: Check reports
+        run: |
+          echo "=== reports contents ==="
+          find reports -maxdepth 3 -type f || true
         if: always()
       - name: Setup Pages
         uses: actions/configure-pages@v4
