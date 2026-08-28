@@ -92,7 +92,7 @@ jobs:
           find .loki -maxdepth 2 -type f || true
         if: always()
       - name: move loki
-        run: mv .loki reports/
+        run: mv .loki reports/loki
         if: always()
       - name: Check reports
         run: |
