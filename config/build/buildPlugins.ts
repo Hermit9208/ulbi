@@ -12,6 +12,7 @@ export function buildPlugins({
     paths, isDev, apiUrl, project,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
     const isProd = !isDev;
+
     const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,

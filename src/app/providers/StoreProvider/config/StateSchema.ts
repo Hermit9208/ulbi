@@ -3,13 +3,15 @@ import {
 } from '@reduxjs/toolkit';
 import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
-import { CounterSchema } from '@/entities/Counter';
-import { UserSchema } from '@/entities/User';
 import { LoginSchema } from '@/features/AuthByUsername';
+import { UserSchema } from '@/entities/User';
+import { CounterSchema } from '@/entities/Counter';
 import { ArticleDetailsSchema } from '@/entities/Article';
-import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
+import {
+    ArticleDetailsPageSchema,
+} from '@/pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
-import { ArticlePageSchema } from '@/pages/ArticlesPage';
+import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { UISchema } from '@/features/UI';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { ProfileSchema } from '@/features/editableProfileCard';
@@ -25,21 +27,19 @@ export interface StateSchema {
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
     addCommentForm?: AddCommentFormSchema;
-    articlesPage?: ArticlePageSchema;
+    articlesPage?: ArticlesPageSchema;
     articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
-
-export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>
+export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
 
 export interface ReducerManager {
     getReducerMap: () => ReducersMapObject<StateSchema>;
     reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
     add: (key: StateSchemaKey, reducer: Reducer) => void;
     remove: (key: StateSchemaKey) => void;
-
-    // true - mounted, false - unmounted
+    // true - вмонтирован, false - демонтирован
     getMountedReducers: () => MountedReducers;
 }
 

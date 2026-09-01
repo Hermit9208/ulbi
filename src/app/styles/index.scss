@@ -20,20 +20,17 @@
     display: flex;
 }
 
-/* Ширина всего скроллбара */
 *::-webkit-scrollbar {
-    width: 8px; /* для вертикального */
-    height: 12px; /* для горизонтального */
+    width: 12px;               /* ширина scrollbar */
+    height: 8px;
 }
 
-/* Фон дорожки (пространство, по которому движется ползунок) */
 *::-webkit-scrollbar-track {
-    background: var(--card-bg);
+    background: var(--card-bg);        /* цвет дорожки */
 }
 
-/* Бегунок (ползунок, который вы перетаскиваете) */
 *::-webkit-scrollbar-thumb {
-    background: var(--inverted-primary-color);
-    border-radius: 20px;
-    border: 2px solid var(--primary-color);
+    background-color: var(--inverted-primary-color);    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 2px solid var(--primary-color);  /* padding вокруг плашки */
 }

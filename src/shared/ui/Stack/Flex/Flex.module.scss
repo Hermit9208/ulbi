@@ -10,16 +10,12 @@
     justify-content: center;
 }
 
-.justifyBetween {
-    justify-content: space-between;
-}
-
-.justifyAround {
-    justify-content: space-around;
-}
-
 .justifyEnd {
     justify-content: flex-end;
+}
+
+.justifyBetween {
+    justify-content: space-between;
 }
 
 .alignStart {
@@ -28,10 +24,6 @@
 
 .alignCenter {
     align-items: center;
-}
-
-.alignStretch {
-    align-items: stretch;
 }
 
 .alignEnd {

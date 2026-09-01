@@ -7,7 +7,7 @@ module.exports = {
         {
             name: '@storybook/addon-essentials',
             options: {
-                backgrounds: false, // 👈 disable the backgrounds addon
+                backgrounds: false,
             },
         },
         '@storybook/addon-interactions',

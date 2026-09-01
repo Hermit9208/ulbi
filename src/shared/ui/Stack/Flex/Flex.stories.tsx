@@ -18,8 +18,9 @@ Row.args = {
     children: (
         <>
             <div>first</div>
-            <div>second</div>
-            <div>third</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
         </>
     ),
 };
@@ -30,20 +31,21 @@ RowGap4.args = {
     children: (
         <>
             <div>first</div>
-            <div>second</div>
-            <div>third</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
         </>
     ),
 };
-
 export const RowGap8 = Template.bind({});
 RowGap8.args = {
     gap: '8',
     children: (
         <>
             <div>first</div>
-            <div>second</div>
-            <div>third</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
         </>
     ),
 };
@@ -54,20 +56,9 @@ RowGap16.args = {
     children: (
         <>
             <div>first</div>
-            <div>second</div>
-            <div>third</div>
-        </>
-    ),
-};
-
-export const RowGap32 = Template.bind({});
-RowGap32.args = {
-    gap: '32',
-    children: (
-        <>
             <div>first</div>
-            <div>second</div>
-            <div>third</div>
+            <div>first</div>
+            <div>first</div>
         </>
     ),
 };
@@ -78,8 +69,9 @@ Column.args = {
     children: (
         <>
             <div>first</div>
-            <div>second</div>
-            <div>third</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
         </>
     ),
 };
@@ -91,8 +83,23 @@ ColumnGap16.args = {
     children: (
         <>
             <div>first</div>
-            <div>second</div>
-            <div>third</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+        </>
+    ),
+};
+
+export const ColumnAlignEnd = Template.bind({});
+ColumnAlignEnd.args = {
+    direction: 'column',
+    align: 'end',
+    children: (
+        <>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
+            <div>first</div>
         </>
     ),
 };

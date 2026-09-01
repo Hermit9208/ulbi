@@ -10,9 +10,9 @@ export {
 };
 
 export type {
-    AppDispatch,
     StateSchema,
+    AppDispatch,
     ThunkConfig,
-    StateSchemaKey,
     ReduxStoreWithManager,
+    StateSchemaKey,
 };

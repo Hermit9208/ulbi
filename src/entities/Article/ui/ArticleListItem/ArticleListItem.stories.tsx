@@ -1,8 +1,9 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Article } from '../../model/types/article';
-import { ArticleListItem } from './ArticleListItem';
+
 import { ArticleView } from '../../model/consts/articleConsts';
+import { ArticleListItem } from './ArticleListItem';
+import { Article } from '../../model/types/article';
 
 export default {
     title: 'entities/Article/ArticleListItem',
@@ -16,21 +17,21 @@ const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListI
 
 const article = {
     id: '1',
-    title: 'JavaScript news and updates about new features',
-    subtitle: 'Whats new in JavaScript for 2022',
+    title: 'Javascript news asfasjf asfjkask f',
+    subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
-    createdAt: '26.02.2026',
+    createdAt: '26.02.2022',
     user: {
         id: '1',
-        username: 'John Doe',
-        avatar: 'https://i.pravatar.cc/150?img=1',
+        username: 'Ulbi tv',
+        avatar: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
     },
     type: [
         'IT',
-        'TECHNOLOGY',
-        'PROGRAMMING',
         'SCIENCE',
+        'POLITICS',
+        'ECONOMICS',
     ],
     blocks: [
         {
@@ -66,7 +67,7 @@ const article = {
         {
             id: '3',
             type: 'CODE',
-            code: 'const path = require(\'path\');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, \'db.json\'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);',
+            code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);",
         },
         {
             id: '7',

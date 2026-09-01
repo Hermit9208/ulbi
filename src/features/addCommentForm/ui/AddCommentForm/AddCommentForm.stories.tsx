@@ -18,7 +18,6 @@ const Template: ComponentStory<typeof AddCommentForm> = (args) => <AddCommentFor
 export const Normal = Template.bind({});
 Normal.args = {
     onSendComment: action('onSendComment'),
-
 };
 Normal.decorators = [
     StoreDecorator({}),

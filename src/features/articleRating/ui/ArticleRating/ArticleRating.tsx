@@ -1,5 +1,5 @@
-import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { RatingCard } from '@/entities/Rating';
 import { useGetArticleRating, useRateArticle } from '../../api/articleRatingApi';
@@ -20,10 +20,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
         articleId,
         userId: userData?.id ?? '',
     });
-
     const [rateArticleMutation] = useRateArticle();
-
-    const rating = data?.[0];
 
     const handleRateArticle = useCallback((starsCount: number, feedback?: string) => {
         try {
@@ -34,6 +31,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
                 feedback,
             });
         } catch (e) {
+            // handle error
             console.log(e);
         }
     }, [articleId, rateArticleMutation, userData?.id]);
@@ -50,15 +48,17 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
         return <Skeleton width="100%" height={120} />;
     }
 
+    const rating = data?.[0];
+
     return (
         <RatingCard
-            className={className}
-            rate={rating?.rate}
-            title={t('Rate the article')}
-            feedbackTitle={t('Leave your feedback about the article, it will help improve the quality')}
-            hasFeedback
-            onAccept={onAccept}
             onCancel={onCancel}
+            onAccept={onAccept}
+            rate={rating?.rate}
+            className={className}
+            title={t('Оцените статью')}
+            feedbackTitle={t('Оставьте свой отзыв о статье, это поможет улучшить качество')}
+            hasFeedback
         />
     );
 });

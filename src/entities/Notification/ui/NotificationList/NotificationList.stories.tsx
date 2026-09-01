@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import withMock from 'storybook-addon-mock';
 import { NotificationList } from './NotificationList';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
@@ -17,30 +18,28 @@ const Template: ComponentStory<typeof NotificationList> = (args) => <Notificatio
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [
-    StoreDecorator({}),
-];
+Normal.decorators = [StoreDecorator({})];
 Normal.parameters = {
     mockData: [
         {
             url: `${__API__}/notifications`,
             method: 'GET',
             status: 200,
-            response: () => [
+            response: [
                 {
                     id: '1',
-                    title: 'Comment',
-                    description: 'Comment on your article',
+                    title: 'Уведомление',
+                    description: 'Поставь лайк и оставь комментарий под Ulbi TV',
                 },
                 {
                     id: '2',
-                    title: 'Follow',
-                    description: 'Followed by user',
+                    title: 'Уведомление 2',
+                    description: 'Поставь лайк и оставь комментарий под Ulbi TV',
                 },
                 {
                     id: '3',
-                    title: 'Like',
-                    description: 'Liked your article',
+                    title: 'Уведомление 3',
+                    description: 'Поставь лайк и оставь комментарий под Ulbi TV',
                 },
             ],
         },

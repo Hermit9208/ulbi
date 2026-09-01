@@ -1,11 +1,11 @@
-import { memo, useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Popover } from '@/shared/ui/Popups';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { Icon } from '@/shared/ui/Icon';
-import { NotificationList } from '@/entities/Notification';
 import NotificationIcon from '@/shared/assets/icons/notification-20-20.svg';
+import { NotificationList } from '@/entities/Notification';
+import { Popover } from '@/shared/ui/Popups';
 import { Drawer } from '@/shared/ui/Drawer';
 import cls from './NotificationButton.module.scss';
 
@@ -15,19 +15,18 @@ interface NotificationButtonProps {
 
 export const NotificationButton = memo((props: NotificationButtonProps) => {
     const { className } = props;
+    const [isOpen, setIsOpen] = useState(false);
 
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-    const onDrawerOpen = useCallback(() => {
-        setIsDrawerOpen(true);
+    const onOpenDrawer = useCallback(() => {
+        setIsOpen(true);
     }, []);
 
-    const onDrawerClose = useCallback(() => {
-        setIsDrawerOpen(false);
+    const onCloseDrawer = useCallback(() => {
+        setIsOpen(false);
     }, []);
 
     const trigger = (
-        <Button onClick={onDrawerOpen} theme={ButtonTheme.CLEAR}>
+        <Button onClick={onOpenDrawer} theme={ButtonTheme.CLEAR}>
             <Icon Svg={NotificationIcon} inverted />
         </Button>
     );
@@ -37,7 +36,7 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
             <BrowserView>
                 <Popover
                     className={classNames(cls.NotificationButton, {}, [className])}
-                    direction="bottom right"
+                    direction="bottom left"
                     trigger={trigger}
                 >
                     <NotificationList className={cls.notifications} />
@@ -45,10 +44,11 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
             </BrowserView>
             <MobileView>
                 {trigger}
-                <Drawer isOpen={isDrawerOpen} onClose={onDrawerClose}>
+                <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
                     <NotificationList />
                 </Drawer>
             </MobileView>
         </div>
+
     );
 });

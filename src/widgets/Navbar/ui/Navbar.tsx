@@ -4,7 +4,9 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { LoginModal } from '@/features/AuthByUsername';
-import { getUserAuthData } from '@/entities/User';
+import {
+    getUserAuthData,
+} from '@/entities/User';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { HStack } from '@/shared/ui/Stack';
@@ -34,16 +36,16 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text
-                    title={t('Ulbi TV App')}
                     className={cls.appName}
+                    title={t('Ulbi TV App')}
                     theme={TextTheme.INVERTED}
                 />
                 <AppLink
                     to={getRouteArticleCreate()}
                     theme={AppLinkTheme.SECONDARY}
-                    className={cls.createLink}
+                    className={cls.createBtn}
                 >
-                    {t('Create article')}
+                    {t('Создать статью')}
                 </AppLink>
                 <HStack gap="16" className={cls.actions}>
                     <NotificationButton />

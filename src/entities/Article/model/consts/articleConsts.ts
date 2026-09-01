@@ -1,8 +1,3 @@
-export enum ArticleView {
-    BIG = 'BIG',
-    SMALL = 'SMALL',
-}
-
 export enum ArticleSortField {
     VIEWS = 'views',
     TITLE = 'title',
@@ -20,4 +15,9 @@ export enum ArticleType {
     IT = 'IT',
     SCIENCE = 'SCIENCE',
     ECONOMICS = 'ECONOMICS'
+}
+
+export enum ArticleView {
+    BIG = 'BIG',
+    SMALL = 'SMALL',
 }

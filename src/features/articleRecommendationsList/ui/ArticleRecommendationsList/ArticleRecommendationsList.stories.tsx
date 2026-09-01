@@ -26,7 +26,7 @@ const article: Article = {
     blocks: [],
     type: [],
     title: '123',
-    subtitle: 'lorem ipsum',
+    subtitle: 'asfsa',
 };
 
 export const Normal = Template.bind({});

@@ -1,8 +1,6 @@
 {
-    "Article not found": "Article not found",
-    "Comments": "Comments",
-    "Back to articles": "Back to articles",
-    "Recommendations": "Recommendations",
-    "Edit": "Edit",
-    "Loading": "Loading"
+  "Статья не найдена": "Article not found",
+  "Комментарии": "Comments",
+  "Назад к списку": "Back to list",
+  "Рекомендуем": "Recommend"
 }

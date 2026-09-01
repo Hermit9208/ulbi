@@ -17,13 +17,17 @@ export const Normal = Template.bind({});
 Normal.args = {
     comment: {
         id: '1',
-        user: { id: '1', username: 'user1' },
-        text: 'Comments',
+        text: 'hello world',
+        user: { id: '1', username: 'Vasya' },
     },
 };
 
 export const Loading = Template.bind({});
 Loading.args = {
-    comment: undefined,
+    comment: {
+        id: '1',
+        text: 'hello world',
+        user: { id: '1', username: 'Vasya' },
+    },
     isLoading: true,
 };

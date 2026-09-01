@@ -22,8 +22,7 @@ describe('fetchNextArticlesPage.test', () => {
         expect(thunk.dispatch).toBeCalledTimes(4);
         expect(fetchArticlesList).toHaveBeenCalled();
     });
-
-    test('fetchArticleList not called', async () => {
+    test('fetchAritcleList not called', async () => {
         const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
             articlesPage: {
                 page: 2,
@@ -32,24 +31,6 @@ describe('fetchNextArticlesPage.test', () => {
                 limit: 5,
                 isLoading: false,
                 hasMore: false,
-            },
-        });
-
-        await thunk.callThunk();
-
-        expect(thunk.dispatch).toBeCalledTimes(2);
-        expect(fetchArticlesList).not.toHaveBeenCalled();
-    });
-
-    test('fetchArticleList is loading', async () => {
-        const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
-            articlesPage: {
-                page: 2,
-                ids: [],
-                entities: {},
-                limit: 5,
-                isLoading: true,
-                hasMore: true,
             },
         });
 

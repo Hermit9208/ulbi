@@ -13,6 +13,5 @@ export const rtkApi = createApi({
             return headers;
         },
     }),
-    tagTypes: ['ProfileRating'],
     endpoints: (builder) => ({}),
 });

@@ -2,24 +2,30 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from '../../../Button/Button';
-import { DropDown } from './DropDown';
+import { Dropdown } from './Dropdown';
 
 export default {
-    title: 'shared/DropDown',
-    component: DropDown,
+    title: 'shared/Dropdown',
+    component: Dropdown,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof DropDown>;
+} as ComponentMeta<typeof Dropdown>;
 
-const Template: ComponentStory<typeof DropDown> = (args) => <DropDown {...args} />;
+const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
     trigger: <Button>Open</Button>,
     items: [
-        { content: '123' },
-        { content: '456' },
-        { content: '789' },
+        {
+            content: 'first',
+        },
+        {
+            content: 'second',
+        },
+        {
+            content: 'third',
+        },
     ],
 };

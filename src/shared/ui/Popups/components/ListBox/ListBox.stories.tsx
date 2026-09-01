@@ -10,11 +10,7 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        (Story) => (
-            <div style={{ padding: 100 }}>
-                <Story />
-            </div>
-        ),
+        (Story) => <div style={{ padding: 100 }}><Story /></div>,
     ],
 } as ComponentMeta<typeof ListBox>;
 
@@ -22,63 +18,49 @@ const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />
 
 export const Normal = Template.bind({});
 Normal.args = {
-    value: 'Choose value',
-    defaultValue: 'Choose value',
+    value: '123',
     items: [
-        { value: '1', content: '123' },
-        { value: '2', content: '456', disabled: true },
-        { value: '3', content: '789' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
-    onChange: (value: string) => {},
 };
 
-export const TopLeft = Template.bind({});
-TopLeft.args = {
-    value: 'Choose value',
-    defaultValue: 'Choose value',
+export const topLeft = Template.bind({});
+topLeft.args = {
     direction: 'top left',
+    value: '123',
     items: [
-        { value: '1', content: '123' },
-        { value: '2', content: '456', disabled: true },
-        { value: '3', content: '789' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
-    onChange: (value: string) => {},
 };
 
-export const TopRight = Template.bind({});
-TopRight.args = {
-    value: 'Choose value',
-    defaultValue: 'Choose value',
+export const topRight = Template.bind({});
+topRight.args = {
     direction: 'top right',
+    value: '123',
     items: [
-        { value: '1', content: '123' },
-        { value: '2', content: '456', disabled: true },
-        { value: '3', content: '789' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
-    onChange: (value: string) => {},
 };
 
-export const BottomLeft = Template.bind({});
-BottomLeft.args = {
-    value: 'Choose value',
-    defaultValue: 'Choose value',
+export const bottomLeft = Template.bind({});
+bottomLeft.args = {
     direction: 'bottom left',
+    value: '123',
     items: [
-        { value: '1', content: '123' },
-        { value: '2', content: '456', disabled: true },
-        { value: '3', content: '789' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
-    onChange: (value: string) => {},
 };
 
-export const BottomRight = Template.bind({});
-BottomRight.args = {
-    value: 'Choose value',
-    defaultValue: 'Choose value',
+export const bottomRight = Template.bind({});
+bottomRight.args = {
     direction: 'bottom right',
+    value: '123',
     items: [
-        { value: '1', content: '123' },
-        { value: '2', content: '456', disabled: true },
-        { value: '3', content: '789' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
 };

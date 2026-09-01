@@ -1,8 +1,9 @@
-import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
 import { useParams } from 'react-router-dom';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { Page } from '@/widgets/Page';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './ArticleEditPage.module.scss';
 
 interface ArticleEditPageProps {
     className?: string;
@@ -15,10 +16,10 @@ const ArticleEditPage = memo((props: ArticleEditPageProps) => {
     const isEdit = Boolean(id);
 
     return (
-        <Page className={classNames('', {}, [className])}>
+        <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
             {isEdit
-                ? t('Edit article with ID = ') + id
-                : t('Create new article')}
+                ? t('Редактирование статьи с ID = ') + id
+                : t('Создание новой статьи')}
         </Page>
     );
 });

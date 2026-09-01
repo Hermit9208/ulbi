@@ -1,5 +1,8 @@
 .starIcon {
     cursor: pointer;
+}
+
+.normal {
     fill: none;
 }
 
@@ -8,5 +11,5 @@
 }
 
 .selected {
-    cursor: default;
+    cursor: auto;
 }

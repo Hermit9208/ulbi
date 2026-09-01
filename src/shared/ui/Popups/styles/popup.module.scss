@@ -4,35 +4,35 @@
 
 .trigger {
     background: none;
-    border: none;
     outline: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    border: none;
     cursor: pointer;
-}
-
-.top.left {
-    bottom: 100%;
-    left: 0;
-}
-
-.top.right {
-    bottom: 100%;
-    right: 0;
-}
-
-.bottom.left {
-    top: 100%;
-    left: 0;
-}
-
-.bottom.right {
-    top: 100%;
-    right: 0;
 }
 
 .active {
     background: var(--inverted-primary-color);
+}
+
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.optionsTopRight {
+    bottom: 100%;
+    left: 0;
+}
+
+.optionsTopLeft {
+    right: 0;
+    bottom: 100%;
 }
 
 .disabled {

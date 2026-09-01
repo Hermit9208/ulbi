@@ -8,11 +8,15 @@ interface UseModalProps {
     animationDelay: number;
 }
 
-export function useModal(props: UseModalProps) {
-    const {
-        onClose, animationDelay, isOpen,
-    } = props;
-
+/**
+ * Переиспользуемый хук для модальных компонентов (drawer/modal)
+ * @param animationDelay
+ * @param isOpen
+ * @param onClose
+ */
+export function useModal({
+    animationDelay, isOpen, onClose,
+}: UseModalProps) {
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;

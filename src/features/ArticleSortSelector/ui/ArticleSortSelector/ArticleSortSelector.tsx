@@ -1,5 +1,5 @@
-import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { memo, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Select, SelectOption } from '@/shared/ui/Select';
 import { SortOrder } from '@/shared/types/sort';
@@ -16,18 +16,14 @@ interface ArticleSortSelectorProps {
 
 export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     const {
-        className,
-        sort,
-        order,
-        onChangeSort,
-        onChangeOrder,
+        className, onChangeOrder, onChangeSort, order, sort,
     } = props;
     const { t } = useTranslation();
 
     const orderOptions = useMemo<SelectOption<SortOrder>[]>(() => [
         {
             value: 'asc',
-            content: t('возростанию'),
+            content: t('возрастанию'),
         },
         {
             value: 'desc',
@@ -52,7 +48,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
 
     return (
         <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
-            <Select
+            <Select<ArticleSortField>
                 options={sortFieldOptions}
                 label={t('Сортировать ПО')}
                 value={sort}
@@ -60,7 +56,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
             />
             <Select
                 options={orderOptions}
-                label={t('По')}
+                label={t('по')}
                 value={order}
                 onChange={onChangeOrder}
                 className={cls.order}

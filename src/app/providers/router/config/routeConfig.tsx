@@ -11,12 +11,12 @@ import { NotFoundPage } from '@/pages/NotFoundPage';
 import {
     AppRoutes,
     getRouteAbout,
-    getRouteAdminPanel,
+    getRouteAdmin,
     getRouteArticleCreate,
     getRouteArticleDetails,
     getRouteArticleEdit,
-    getRouteArticles,
     getRouteForbidden,
+    getRouteArticles,
     getRouteMain,
     getRouteProfile,
 } from '@/shared/const/router';
@@ -46,18 +46,18 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         element: <ArticleDetailsPage />,
         authOnly: true,
     },
-    [AppRoutes.ARTICLE_EDIT]: {
-        path: getRouteArticleEdit(':id'),
-        element: <ArticleEditPage />,
-        authOnly: true,
-    },
     [AppRoutes.ARTICLE_CREATE]: {
         path: getRouteArticleCreate(),
         element: <ArticleEditPage />,
         authOnly: true,
     },
+    [AppRoutes.ARTICLE_EDIT]: {
+        path: getRouteArticleEdit(':id'),
+        element: <ArticleEditPage />,
+        authOnly: true,
+    },
     [AppRoutes.ADMIN_PANEL]: {
-        path: getRouteAdminPanel(),
+        path: getRouteAdmin(),
         element: <AdminPanelPage />,
         authOnly: true,
         roles: [UserRole.MANAGER, UserRole.ADMIN],

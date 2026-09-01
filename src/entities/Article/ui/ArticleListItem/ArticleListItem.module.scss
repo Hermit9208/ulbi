@@ -44,18 +44,6 @@
     transition: 0.2s;
     cursor: pointer;
 
-    .imageWrapper {
-        width: 200px;
-        height: 200px;
-        position: relative;
-    }
-
-    .img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-    }
-
     .date {
         position: absolute;
         right: 0;
@@ -70,6 +58,18 @@
         .date {
             display: block;
         }
+    }
+
+    .imageWrapper {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+
+    .img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
     }
 
     .infoWrapper {

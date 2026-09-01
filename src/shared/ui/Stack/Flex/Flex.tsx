@@ -1,9 +1,9 @@
-import { ComponentPropsWithoutRef, memo, ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Flex.module.scss';
 
-export type FlexJustify = 'start' | 'center' | 'end' | 'between' | 'around';
-export type FlexAlign = 'start' | 'center' | 'end' | 'stretch';
+export type FlexJustify = 'start' | 'center' | 'end' | 'between';
+export type FlexAlign = 'start' | 'center' | 'end';
 export type FlexDirection = 'row' | 'column';
 export type FlexGap = '4' | '8' | '16' | '32';
 
@@ -12,14 +12,12 @@ const justifyClasses: Record<FlexJustify, string> = {
     center: cls.justifyCenter,
     end: cls.justifyEnd,
     between: cls.justifyBetween,
-    around: cls.justifyAround,
 };
 
 const alignClasses: Record<FlexAlign, string> = {
     start: cls.alignStart,
     center: cls.alignCenter,
     end: cls.alignEnd,
-    stretch: cls.alignStretch,
 };
 
 const directionClasses: Record<FlexDirection, string> = {
@@ -34,11 +32,11 @@ const gapClasses: Record<FlexGap, string> = {
     32: cls.gap32,
 };
 
-type DivProps = ComponentPropsWithoutRef<'div'>;
+type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 export interface FlexProps extends DivProps {
     className?: string;
-    children?: ReactNode;
+    children: ReactNode;
     justify?: FlexJustify;
     align?: FlexAlign;
     direction: FlexDirection;
@@ -46,13 +44,13 @@ export interface FlexProps extends DivProps {
     max?: boolean;
 }
 
-export const Flex = memo((props: FlexProps) => {
+export const Flex = (props: FlexProps) => {
     const {
         className,
         children,
         justify = 'start',
-        direction = 'row',
         align = 'center',
+        direction = 'row',
         gap,
         max,
     } = props;
@@ -74,4 +72,4 @@ export const Flex = memo((props: FlexProps) => {
             {children}
         </div>
     );
-});
+};

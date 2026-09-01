@@ -19,8 +19,8 @@ export interface ArticleImageBlock extends ArticleBlockBase {
 
 export interface ArticleTextBlock extends ArticleBlockBase {
     type: ArticleBlockType.TEXT;
-    title?: string;
     paragraphs: string[];
+    title?: string;
 }
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;

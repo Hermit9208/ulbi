@@ -10,16 +10,15 @@ import { Text, TextTheme } from '@/shared/ui/Text';
 import { ProfileCard } from '@/entities/Profile';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { VStack } from '@/shared/ui/Stack';
-import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
-import { profileActions, profileReducer } from '../../model/slice/profileSlice';
+import { ValidateProfileError } from '../../model/consts/consts';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
-
-import { ValidateProfileError } from '../../model/consts/consts';
+import { profileActions, profileReducer } from '../../model/slice/profileSlice';
+import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
 interface EditableProfileCardProps {
     className?: string;
@@ -33,6 +32,7 @@ const reducers: ReducersList = {
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     const { className, id } = props;
     const { t } = useTranslation('profile');
+
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
@@ -87,7 +87,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     }, [dispatch]);
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={reducers}>
             <VStack
                 gap="8"
                 max

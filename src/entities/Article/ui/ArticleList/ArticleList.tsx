@@ -1,30 +1,28 @@
-import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Text, TextSize } from '@/shared/ui/Text';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { Text, TextSize } from '@/shared/ui/Text';
+import { ArticleView } from '../../model/consts/articleConsts';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { Article } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
-import { ArticleView } from '../../model/consts/articleConsts';
+import { Article } from '../../model/types/article';
 
 interface ArticleListProps {
     className?: string;
-    articles: Article[];
+    articles: Article[]
     isLoading?: boolean;
-    view?: ArticleView;
     target?: HTMLAttributeAnchorTarget;
+    view?: ArticleView;
 }
 
-const getSkeletons = (view: ArticleView) => (
-    new Array(view === ArticleView.SMALL ? 9 : 3)
-        .fill(0)
-        .map((item, index) => (
-            <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
-        ))
-);
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
+    .fill(0)
+    .map((item, index) => (
+        <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
+    ));
 
-const ArticleList = memo((props: ArticleListProps) => {
+export const ArticleList = memo((props: ArticleListProps) => {
     const {
         className,
         articles,
@@ -37,24 +35,26 @@ const ArticleList = memo((props: ArticleListProps) => {
     if (!isLoading && !articles.length) {
         return (
             <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                <Text size={TextSize.L} title={t('Article not found')} />
+                <Text size={TextSize.L} title={t('Статьи не найдены')} />
             </div>
         );
     }
 
     return (
-        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+        <div
+            className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+        >
             {articles.map((item) => (
                 <ArticleListItem
                     article={item}
                     view={view}
                     target={target}
-                    key={`str${item.id}`}
+                    key={item.id}
                     className={cls.card}
                 />
             ))}
             {isLoading && getSkeletons(view)}
         </div>
+
     );
 });
-export default ArticleList;

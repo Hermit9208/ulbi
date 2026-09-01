@@ -1,22 +1,22 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
-import { Country } from '@/entities/Country';
 import { Profile } from '@/entities/Profile';
 import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
 import { $api } from '@/shared/api/api';
 import { profileReducer } from '../../model/slice/profileSlice';
 import { EditableProfileCard } from './EditableProfileCard';
 
 const profile: Profile = {
     id: '1',
-    username: 'admin',
-    age: 22,
-    country: Country.Ukraine,
-    lastname: 'admin',
     first: 'admin',
-    city: 'asf',
+    lastname: 'admin',
+    age: 465,
     currency: Currency.USD,
+    country: Country.Kazakhstan,
+    city: 'Moscow',
+    username: 'admin213',
 };
 
 const options = {
@@ -36,13 +36,13 @@ const options = {
 };
 
 describe('features/EditableProfileCard', () => {
-    test('read only switch', async () => {
+    test('Режим рид онли должен переключиться', async () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
         expect(screen.getByTestId('EditableProfileCardHeader.CancelButton')).toBeInTheDocument();
     });
 
-    test('When we click cancel button we have default value', async () => {
+    test('При отмене значения должны обнуляться', async () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
@@ -61,7 +61,7 @@ describe('features/EditableProfileCard', () => {
         expect(screen.getByTestId('ProfileCard.lastname')).toHaveValue('admin');
     });
 
-    test('Should have error', async () => {
+    test('Должна появиться ошибка', async () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
@@ -72,8 +72,8 @@ describe('features/EditableProfileCard', () => {
         expect(screen.getByTestId('EditableProfileCard.Error.Paragraph')).toBeInTheDocument();
     });
 
-    test('If we do not have errors, then a request should be sent to the server ', async () => {
-        const mockUpdateProfileData = jest.spyOn($api, 'put');
+    test('Если нет ошибок валидации, то на сервер должен уйти PUT запрос', async () => {
+        const mockPutReq = jest.spyOn($api, 'put');
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
@@ -81,6 +81,6 @@ describe('features/EditableProfileCard', () => {
 
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.SaveButton'));
 
-        expect(mockUpdateProfileData).toHaveBeenCalled();
+        expect(mockPutReq).toHaveBeenCalled();
     });
 });
