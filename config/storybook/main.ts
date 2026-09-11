@@ -3,9 +3,7 @@ import path from 'path';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 
 export default {
-    stories: [
-        '../../src/**/*.stories.@(js|jsx|ts|tsx)',
-    ],
+    stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
         '@storybook/addon-links',
         {
@@ -40,13 +38,15 @@ export default {
 
         // eslint-disable-next-line no-param-reassign
         // @ts-ignore
-        config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
-            if (/svg/.test(rule.test as string)) {
-                return { ...rule, exclude: /\.svg$/i };
-            }
+        config!.module!.rules = config.module!.rules!.map(
+            (rule: RuleSetRule) => {
+                if (/svg/.test(rule.test as string)) {
+                    return { ...rule, exclude: /\.svg$/i };
+                }
 
-            return rule;
-        });
+                return rule;
+            },
+        );
 
         config!.module!.rules.push({
             test: /\.svg$/,
@@ -54,11 +54,13 @@ export default {
         });
         config!.module!.rules.push(buildCssLoader(true));
 
-        config!.plugins!.push(new DefinePlugin({
-            __IS_DEV__: JSON.stringify(true),
-            __API__: JSON.stringify('https://testapi.ru'),
-            __PROJECT__: JSON.stringify('storybook'),
-        }));
+        config!.plugins!.push(
+            new DefinePlugin({
+                __IS_DEV__: JSON.stringify(true),
+                __API__: JSON.stringify('https://testapi.ru'),
+                __PROJECT__: JSON.stringify('storybook'),
+            }),
+        );
 
         return config; // Always return the mutated configuration!
     },
