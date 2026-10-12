@@ -49,5 +49,9 @@
     "Создать статью": "Создать статью",
     "Профиль пользователя": "Профиль пользователя",
     "Ваш отзыв": "Ваш отзыв",
-    "Закрыть": "Закрыть"
+    "Закрыть": "Закрыть",
+    "Welcome to the article page": "Welcome to the article page",
+    "Here you can watch and read the article": {
+        "": "Here you can watch and read the article."
+    }
 }
